@@ -44,14 +44,12 @@ const SecPago = () => {
             let currentSalidaReserva = getInfoLocalAsientosSalida();
             if (Object.entries(currentSalidaReserva).length !== 0) {
               let infoVueloSalida = await getInfoVuelo(currentSalidaReserva.id);
-              console.log(infoVueloSalida[0].asientosOcupados);
+
               if (infoVueloSalida[0].asientosOcupados.length !== 0) {
-                console.log("ENTREEE");
                 currentSalidaReserva.asientosOcupados = [
                   ...infoVueloSalida[0].asientosOcupados,
                   ...currentSalidaReserva.asientosOcupados,
                 ];
-                console.log(currentSalidaReserva.asientosOcupados);
               }
 
               responseVSalida = await updateInfoVuelo(currentSalidaReserva);
@@ -69,7 +67,6 @@ const SecPago = () => {
                 ];
               }
               responseVRegreso = await updateInfoVuelo(currentRegresoReserva);
-              console.log(responseVSalida, responseVRegreso);
             }
             if (responseVSalida === true && responseVRegreso === true) {
               Swal.fire(
@@ -91,12 +88,10 @@ const SecPago = () => {
             if (Object.entries(currentSalidaReserva).length !== 0) {
               let infoVueloSalida = await getInfoVuelo(currentSalidaReserva.id);
               if (infoVueloSalida[0].asientosOcupados.length !== 0) {
-                console.log("ENTREEE");
                 currentSalidaReserva.asientosOcupados = [
                   ...infoVueloSalida[0].asientosOcupados,
                   ...currentSalidaReserva.asientosOcupados,
                 ];
-                console.log(currentSalidaReserva.asientosOcupados);
               }
 
               // responseVSalida = await updateInfoVuelo(currentSalidaReserva);
