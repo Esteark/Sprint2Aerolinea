@@ -1,0 +1,112 @@
+@import "../../Vars.scss";
+.secInfoVuelos {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.SecHorarios_flex {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.SecHorario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+
+  &__texts {
+    .h2Text1 {
+      font-size: 2rem;
+      font-weight: 900;
+    }
+    .h2Text2 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-top: 30px;
+    }
+    .pText1 {
+      font-size: 16px;
+      font-weight: 300;
+      color: $GrayFont;
+      margin-top: 5px;
+      margin-bottom: 25px;
+    }
+    .pText2 {
+      font-size: 16px;
+      font-weight: 600;
+      color: $Black;
+    }
+  }
+
+  &__button {
+    align-self: center;
+    button {
+      background: transparent;
+      border: 2px solid $MainColor;
+      padding: 10px 20px;
+      border-radius: 20px;
+      color: $MainColor;
+      font-size: 18px;
+      transition: 0.5s;
+
+      &:hover {
+        background-color: $MainColor;
+        color: $White;
+        cursor: pointer;
+        transition: 0.5s;
+      }
+    }
+  }
+}
+
+.SecVuelosSalida {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 220px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.SecVuelosSalida::-webkit-scrollbar {
+  width: 5px;
+}
+
+.SecVuelosSalida::-webkit-scrollbar-thumb {
+  background-color: $MainColor;
+  border-radius: 10px;
+}
+.SecVuelosSalida::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px $Gray;
+  border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+  .SecHorario {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    text-align: left;
+  }
+
+  .SecVuelosSalida {
+    height: 300px;
+  }
+}
+
+@media (min-width: 992px) {
+  .secInfoVuelos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .SecVuelosSalida {
+    height: 250px;
+  }
+  .SecHorarios_flex {
+    margin-bottom: 50px;
+  }
+}

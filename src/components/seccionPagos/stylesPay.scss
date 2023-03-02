@@ -1,0 +1,147 @@
+.SecMainPagos {
+  h2 {
+    padding-left: 5%;
+    font-size: 25px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  margin: 10% 0;
+  margin-bottom: 20%;
+}
+
+.SecPagos {
+  width: 90%;
+  margin: 0 auto;
+  min-height: 200px;
+  border-radius: 20px;
+  -webkit-box-shadow: -1px 10px 21px -18px rgba(47, 47, 47, 1);
+  -moz-box-shadow: -1px 10px 21px -18px rgba(47, 47, 47, 1);
+  box-shadow: -1px 10px 21px -18px rgba(47, 47, 47, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dimensionIcon {
+  width: 40px;
+  height: 40px;
+}
+
+.Sec1Pay__icon1 {
+  background: url("../../assets/img/Amex.svg");
+  background-size: cover;
+  background-position: center;
+}
+.Sec1Pay__icon2 {
+  background: url("../../assets/img/paypal.svg");
+  background-size: cover;
+  background-position: center;
+}
+.Sec1Pay__icon3 {
+  background: url("../../assets/img/banco.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.Sec1Pay__icon4 {
+  background: url("../../assets/img/Visa.svg");
+  background-size: cover;
+  background-position: center;
+}
+.Sec2Pay__icon1 {
+  background: url("../../assets/img/oxxo.svg");
+  background-size: cover;
+  background-position: center;
+}
+.Sec2Pay__icon2 {
+  background: url("../../assets/img/7-eleven.svg");
+  background-size: cover;
+  background-position: center;
+}
+.Sec2Pay__icon3 {
+  background: url("../../assets/img/walmart.svg");
+  background-size: cover;
+  background-position: center;
+}
+.Sec2Pay__icon4 {
+  background: url("../../assets/img/farmacias.svg");
+  background-size: cover;
+  background-position: center;
+}
+
+.Sec1Pay {
+  text-align: center;
+  padding: 5% 0;
+
+  p {
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+
+  .Sec1Pay__icons {
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+.Sec2Pay {
+  @extend .Sec1Pay;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  p {
+    font-size: 14px;
+  }
+  .Sec2Pay__icons {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .SecMainPagos {
+    h2 {
+      text-align: left;
+    }
+    margin: 1% 0;
+    margin-bottom: 5%;
+  }
+  .SecPagos {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+
+    min-height: 80px;
+    padding: 0 20px;
+    .Sec1Pay {
+      min-height: 80px;
+
+      p {
+        height: 0;
+        font-size: 12px;
+        text-align: start;
+      }
+      .Sec1Pay__icons {
+        justify-content: start;
+        gap: 30px;
+      }
+    }
+    .Sec2Pay {
+      min-height: 80px;
+
+      p {
+        height: 0;
+        font-size: 12px;
+        text-align: start;
+      }
+      .Sec2Pay__icons {
+        justify-content: start;
+        gap: 30px;
+      }
+    }
+  }
+  .dimensionIcon {
+    width: 25px;
+    height: 25px;
+  }
+}

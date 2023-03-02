@@ -1,0 +1,24 @@
+.imgTravel {
+  width: 70%;
+  height: 80vh;
+  background: linear-gradient(
+      270deg,
+      rgba(163, 40, 129, 0.3562675070028011) 24%,
+      rgba(185, 182, 185, 0.8240546218487395) 71%
+    ),
+    url("../../assets/img/plane.webp");
+
+  background-size: cover;
+  background-position: center;
+  border-radius: 25px;
+  transform: translateX(-50px);
+}
+
+.hiddenImage {
+  display: none;
+}
+@media (min-width: 768px) {
+  .hiddenImage {
+    display: block;
+  }
+}

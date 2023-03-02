@@ -1,0 +1,10 @@
+.SecPasillo {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  &__pasillo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}

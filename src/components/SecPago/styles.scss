@@ -1,0 +1,167 @@
+@import "../../Vars.scss";
+
+.SecPagoForm {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column-reverse;
+  .imgForm {
+    flex-grow: 0;
+    width: 50%;
+    display: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background: linear-gradient(
+        270deg,
+        rgba(163, 40, 129, 0.3562675070028011) 24%,
+        rgba(185, 182, 185, 0.8240546218487395) 71%
+      ),
+      url("../../assets/img/plane2.webp");
+  }
+  form {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10%;
+    justify-content: center;
+    label {
+      font-weight: 600;
+      font-size: 1rem;
+      color: $Black;
+    }
+    .lblError {
+      color: $MainColor;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    input {
+      height: 40px;
+      border-radius: 5px;
+      border: 2px solid $MainColor;
+      padding: 10px;
+      font-weight: 600;
+      &:focus {
+        outline: $MainColor;
+      }
+    }
+    button {
+      background-color: $MainColor;
+      padding: 10px;
+      border: none;
+      border-radius: 20px;
+      font-size: 1rem;
+      font-weight: 500;
+      color: $White;
+      transition: 0.5s;
+      cursor: pointer;
+      &:hover {
+        background-color: $Black;
+        transition: 0.5s;
+      }
+    }
+
+    figure {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      figcaption {
+        p {
+          font-weight: 600;
+          color: $Black;
+          font-size: 1.1rem;
+          transition: 0.5s;
+          &:hover {
+            color: $MainColor;
+            transition: 0.5s;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .SecPagoForm {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    .imgForm {
+      display: block;
+    }
+    form {
+      flex-grow: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 10%;
+      justify-content: center;
+      label {
+        font-weight: 600;
+        font-size: 1rem;
+        color: $Black;
+      }
+      .lblError {
+        color: $MainColor;
+        font-size: 13px;
+        font-weight: 600;
+      }
+      input {
+        height: 40px;
+        border-radius: 5px;
+        border: 2px solid $MainColor;
+        padding: 10px;
+
+        &:focus {
+          outline: $MainColor;
+        }
+      }
+      button {
+        background-color: $MainColor;
+        padding: 10px;
+        border: none;
+        border-radius: 20px;
+        font-size: 1rem;
+        font-weight: 500;
+        color: $White;
+        transition: 0.5s;
+        cursor: pointer;
+        &:hover {
+          background-color: $Black;
+          transition: 0.5s;
+        }
+      }
+
+      figure {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        figcaption {
+          p {
+            font-weight: 600;
+            color: $Black;
+            font-size: 1.1rem;
+            transition: 0.5s;
+            &:hover {
+              color: $MainColor;
+              transition: 0.5s;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}

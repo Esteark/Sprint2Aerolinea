@@ -1,0 +1,192 @@
+@import "../../Vars.scss";
+
+.formTravel {
+  width: 320px;
+  min-height: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: $Gray;
+  border-radius: 10px;
+  -webkit-box-shadow: -2px 5px 28px -13px rgba(0, 0, 0, 1);
+  -moz-box-shadow: -2px 5px 28px -13px rgba(0, 0, 0, 1);
+  box-shadow: -2px 5px 28px -13px rgba(0, 0, 0, 1);
+
+  .titleForm {
+    font-size: 1.5rem;
+  }
+  .subtitleForm {
+    font-size: 16px;
+  }
+  .Form__SecButtons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+    background-color: $White;
+    border-radius: 5px;
+    span {
+      width: 100%;
+      background-color: transparent;
+      border: none;
+      font-weight: 600;
+      font-size: 13px;
+      padding: 5px;
+      border-radius: 5px;
+      height: 25px;
+      cursor: pointer;
+      transition: 0.5s;
+      text-align: center;
+    }
+
+    .activeSpan {
+      background-color: $MainColor;
+      color: $White;
+      transition: 0.5s;
+    }
+  }
+  .borderInputs {
+    border: 1px solid $GrayBackModal;
+  }
+
+  .Form__SecInputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    .d-flexSec {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .textinfo {
+      color: $GrayFont;
+    }
+
+    .SecTravel {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+      border-radius: 5px;
+      padding: 10px;
+      background-color: $White;
+      width: 100%;
+    }
+    p {
+      font-size: 13px;
+    }
+  }
+  .SecDate {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 5px;
+    border-radius: 5px;
+    background-color: $White;
+    width: 100%;
+    p {
+      font-size: 13px;
+    }
+    .textDate {
+      font-weight: 600;
+    }
+    .inputformDate {
+      font-size: 13px;
+      text-align: left;
+    }
+  }
+  .SecDataFlight {
+    display: flex;
+    flex-direction: column;
+    background-color: $White;
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    gap: 10px;
+    p {
+      font-size: 13px;
+    }
+    .textInfoFlight {
+      font-weight: 600;
+    }
+    .inputFormFlight {
+      text-align: left;
+      font-size: 13px;
+    }
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+.inputForm {
+  width: 100%;
+  border: none;
+  background: transparent;
+  text-align: center;
+  font-size: 1rem;
+  color: $Black;
+  font-weight: 600;
+  &:focus {
+    outline: none;
+  }
+}
+
+.btnSendFormFlight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 0;
+  background-color: $MainColor;
+  border: none;
+  color: $White;
+  gap: 10px;
+  border-radius: 20px;
+  transition: 0.5s;
+  &:hover {
+    background-color: $Black;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+}
+
+.positionForm {
+  position: relative;
+  top: 5%;
+}
+
+@media (min-width: 768px) {
+  .formTravel {
+    width: 450px;
+    min-height: 500px;
+    .subtitleForm {
+      font-size: 13px;
+    }
+    .borderInputs {
+      border: 2px solid $GrayBackModal;
+    }
+    .Form__SecButtons {
+      width: 100%;
+      height: 40px;
+      padding: 0 5px;
+    }
+
+    .Form__SecInputs {
+      .d-flexSec {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  }
+  .positionForm {
+    position: relative;
+    z-index: 2;
+    left: 0;
+    transform: translateX(100px);
+    top: auto;
+  }
+}
