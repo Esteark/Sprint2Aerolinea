@@ -50,12 +50,14 @@
   }
   .borderInputs {
     border: 1px solid $GrayBackModal;
+    cursor: pointer;
   }
 
   .Form__SecInputs {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    cursor: pointer;
     .d-flexSec {
       display: flex;
       flex-direction: column;
@@ -131,6 +133,7 @@
   font-size: 1rem;
   color: $Black;
   font-weight: 600;
+  cursor: pointer;
   &:focus {
     outline: none;
   }
