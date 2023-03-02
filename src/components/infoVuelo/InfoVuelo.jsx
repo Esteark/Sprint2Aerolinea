@@ -95,10 +95,6 @@ const InfoVuelo = () => {
   };
 
   useEffect(() => {
-    console.log(tipoEquipaje);
-  }, [tipoEquipaje]);
-
-  useEffect(() => {
     const formato = new Intl.NumberFormat("es-CO", {
       style: "currency",
       currency: "COP",
@@ -106,7 +102,6 @@ const InfoVuelo = () => {
     });
 
     setFormatterPeso(formato);
-    console.log(formatterPeso);
   }, []);
 
   const renderInicial = () => {
@@ -153,23 +148,6 @@ const InfoVuelo = () => {
   useEffect(() => {
     renderInicial();
   }, []);
-
-  useEffect(() => {
-    // console.log(currentVuelo);
-    // console.log(salidaVuelos);
-    // console.log(regresoVuelos);
-    console.log(tipoEquipaje);
-    console.log(currentVuelo);
-    // console.log(currentVueloSalida);
-    // console.log(currentVueloRegreso);
-  }, [
-    currentVuelo,
-    salidaVuelos,
-    regresoVuelos,
-    currentVueloSalida,
-    currentVueloRegreso,
-    tipoEquipaje,
-  ]);
 
   return (
     <VueloContext.Provider

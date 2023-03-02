@@ -112,7 +112,6 @@ const Facturacion = ({}) => {
     setTotalSalida(vueloSalida);
     let tarifades = 0;
     if (opcionViaje === 0) {
-      console.log("Estoy entrando");
       let VueloRegreso =
         currentVueloRegreso.price * currentVuelo.cantPasajeros +
         (currentVueloRegreso.scale ? 120000 : 0);
@@ -162,7 +161,6 @@ const Facturacion = ({}) => {
     } else {
       let precioEquipajeSalida = tipoEquipaje.salida.split("");
       let opEquipaje = Number(precioEquipajeSalida[0]);
-      console.log(opEquipaje);
       switch (opEquipaje) {
         case 0:
           pEquipajeSalida = 60000;
@@ -185,7 +183,6 @@ const Facturacion = ({}) => {
 
   useEffect(() => {
     renderFactura();
-    console.log(isNaN(totalSalida) ? "esta inde" : "no");
   }, [
     currentVueloSalida,
     currentVueloRegreso,

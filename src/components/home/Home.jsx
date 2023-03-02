@@ -76,11 +76,6 @@ const Home = () => {
     setTravelOpcion(opcion);
   }, []);
 
-  //Use effect para corroborar información
-  useEffect(() => {
-    console.log(hideAnimacion);
-  }, [opTravel, opPlace, formData, showModal]);
-
   return (
     <AppContext.Provider
       value={{
